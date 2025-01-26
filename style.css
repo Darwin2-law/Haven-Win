@@ -1,0 +1,349 @@
+/* Basic styling for profile page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  display: flex; /* Use flexbox to align navbar items horizontally */
+  justify-content: space-around; /* Evenly space the items */
+  padding: 10px 0;
+  position: sticky; /* Stick the navbar at the top of the screen */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap; /* Allow navbar items to wrap when space is tight */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow navbar items to wrap */
+  justify-content: center; /* Center the navbar items */
+}
+
+.navbar li {
+  display: inline-block; /* Align list items horizontally */
+  margin: 0 10px; /* Space between icons */
+  width: 80px; /* Set a fixed width for each icon */
+  text-align: center;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 14px; /* Icon label text size */
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.navbar .active {
+  background-color: #4CAF50;
+}
+
+.container {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.profile-section {
+  width: 45%;
+}
+
+.profile-section h3 {
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+}
+
+.profile-section h3 i {
+  margin-right: 10px;
+}
+
+.profile-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens with width 768px or less (tablets and below) */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Stack navbar items vertically */
+      text-align: center;
+  }
+
+  .profile-info {
+      flex-direction: column; /* Stack profile sections vertically */
+      align-items: center;
+  }
+
+  .profile-section {
+      width: 100%; /* Take full width on smaller screens */
+      margin-bottom: 20px;
+  }
+
+  .container {
+      width: 90%; /* Increase container width on smaller screens */
+      margin: 10px;
+  }
+
+  table {
+      font-size: 14px; /* Smaller font size for tables */
+  }
+
+  table th, table td {
+      padding: 10px; /* Adjust table padding for smaller screens */
+  }
+}
+
+/* For screens with width 480px or less (mobiles) */
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px 0;
+  }
+
+  .navbar ul {
+      flex-direction: column; /* Stack navbar items vertically on small screens */
+  }
+
+  .navbar li {
+      margin: 10px 0; /* Add space between icons */
+      width: 60px; /* Reduce icon width for smaller screens */
+  }
+
+  .navbar a {
+      padding: 8px; /* Adjust padding for mobile screens */
+      font-size: 12px; /* Smaller text size for mobile */
+  }
+
+  .profile-info {
+      padding: 10px;
+  }
+
+  .profile-section {
+      width: 100%; /* Full width for profile sections */
+      padding: 10px;
+  }
+
+  .profile-section h3 {
+      font-size: 18px; /* Slightly smaller heading */
+  }
+
+  .container {
+      width: 95%; /* Take more space on very small screens */
+  }
+
+  table {
+      font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  table th, table td {
+      padding: 8px; /* Even smaller table padding for mobile */
+  }
+}
+
+
+ 
+  /* Main Section */
+  main {
+    padding: 100px 20px; /* Add padding to compensate for fixed navbar */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(39, 223, 164, 0.1);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar ul li {
+      margin: 0 10px;
+    }
+  
+    .navbar ul li a {
+      font-size: 0.9rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+     p {
+      font-size: 1rem;
+    }
+  }
+  .sidebar {
+    width: 250px;
+    background-color: #1a1a2e;
+    color: white;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+  }
+  
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .sidebar-menu li a:hover {
+    background-color: #e94560;
+  }
+  
+  .sidebar-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-icon i {
+    margin-right: 15px;
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    background-color: #f0f0f0;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+ /* Styling for the main content */
+main {
+  margin-top: 60px;  /* Adjust for fixed nav */
+}
+
+/* Moving and Color Changing Paragraph Styling */
+.moving-paragraph {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  animation: move-and-change-color 5s ease-in-out infinite;
+}
+
+/* Animation for Moving and Color Changing */
+@keyframes move-and-change-color {
+  0% {
+      transform: translateX(0);
+      color: #333;  /* Initial color */
+  }
+  25% {
+      transform: translateX(50px);
+      color: #ff5733;  /* Orange color */
+  }
+  50% {
+      transform: translateX(0);
+      color: #33c1ff;  /* Light blue color */
+  }
+  75% {
+      transform: translateX(-50px);
+      color: #ff33b2;  /* Pink color */
+  }
+  100% {
+      transform: translateX(0);
+      color: #333;  /* Back to initial color */
+  }
+}
+
+/* General Text Styling */
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
